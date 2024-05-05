@@ -1,7 +1,15 @@
-{% extends "layout.html" %}
-{% block title %}
-    Qr List
-{% endblock title %}
-{% block content %}
-    <h1>Qr</h1>
+{% extends "layout.html" %} {% block title %} Qr List {% endblock title %} 
+{%block content %}
+<section>
+  <h1>Qr</h1>
+  {% for qr in qrs %}
+  <article>
+    <h2>
+      <a href="{% url 'qrs:page' slug=qr.slug %}">
+          {{qr.title}}
+      </a>
+    </h2>
+  </article>
+  {% endfor %}
+</section>
 {% endblock content %}
