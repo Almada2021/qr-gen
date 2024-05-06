@@ -1,0 +1,11 @@
+{% extends "layout.html" %} {% block title %} Ingresar {% endblock title %}
+{%block content %}
+<section class="form-container">
+  <h1>Ingresar Ahora</h1>
+  {% comment %} <form class="form-with-validation" action="/users/register/" method="post">
+    {% csrf_token %}
+    {{form}}
+    <button>Registrar</button>
+  </form> {% endcomment %}
+</section>
+{% endblock content %}

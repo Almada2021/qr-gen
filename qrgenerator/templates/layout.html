@@ -17,8 +17,8 @@
       <!-- Navbar para usuarios autenticados -->
       <a href="/logout">Cerrar sesión</a>
       {% else %}
-      <a href="/login">Iniciar sesión</a>
-      <a href="/register">Registrarse</a>
+      <a class="navbar-btn-m" href="{% url 'users:login' %}">Iniciar sesión</a>
+      <a class="navbar-btn-m" href="{% url 'users:register' %}">Registrarse</a>
       {% endif %}
     </nav>
 
