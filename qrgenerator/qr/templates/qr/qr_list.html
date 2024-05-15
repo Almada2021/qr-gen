@@ -1,9 +1,20 @@
 {% extends "layout.html" %} {% block title %} Qr List {% endblock title %} 
 {%block content %}
-<section>
-  <h1>Qr</h1>
+<section class="main-qr">
+  <div class="main-qr-header">
+    <div class="main-qr-header-container">
+      <h1 class="main-qr-header-h1">Tus Qr</h1>
+    </div>
+    <div class="btn-container">
+      <button onclick="location.href='{% url 'qrs:add'%}'" class="main-qr-header-btn">Agregar Qr</button>
+    </div>
+    <div class="btn-container">
+
+      <button onclick="location.href='{% url 'qrs:make'%}'" class="main-qr-header-btn">Crear Qr</button>
+    </div>
+  </div>
   {% for qr in qrs %}
-  <article>
+  <article >
     <h2>
       <a href="{% url 'qrs:page' slug=qr.slug %}">
           {{qr.title}}

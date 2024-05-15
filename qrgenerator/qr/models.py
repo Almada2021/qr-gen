@@ -7,6 +7,7 @@ class Qr (models.Model):
     body = models.TextField()
     slug = models.SlugField()
     date = models.DateTimeField(auto_now_add=True)
+    url = models.URLField(null=True)
     image = models.ImageField(default='fallback.png', blank=True)
     # los metodos no cambian el modelo no necesario migrar
     def __str__(self) -> str:

@@ -19,9 +19,10 @@ from django.urls import path, include
 from . import views
 from django.conf.urls.static import static
 from django.conf import settings
+app_name = "main"
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.homepage),
+    path("", views.homepage, name='home'),
     path("about/", views.about),
     path('qr/', include('qr.urls')),
     path('users/', include('users.urls')),

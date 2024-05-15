@@ -1,0 +1,9 @@
+{% extends "layout.html" %} {% block title %} Qr List {% endblock title %}
+{%block content %}
+<section class="main-qr">
+  <form action="{% url "qrs:make" %}" method="post">{%csrf_token %} 
+    {{form}}
+    <button type="submit">save</button>
+  </form>
+</section>
+{% endblock content %}
