@@ -1,4 +1,10 @@
 {% extends "layout.html" %}
+{% block head %}
+{% load icons %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+{% endblock head %}
+
+
 {% block title %}
     Inicio
 {% endblock  %}
@@ -8,9 +14,18 @@
     <h2 class="h2-title">La mejor App para gestionar tus Qrs</h2>
 </section>
 <section class="cards-container">
-    <div class="card">Card</div>
-    <div class="card">Card</div>
-    <div class="card">Card</div>
+    <div class="card">
+        <i class="fa-brands fa-opensuse"></i>
+        <h2>Open Source</h2>
+    </div>
+    <div class="card">
+        <i class="fa-solid fa-truck-fast"></i>        
+        <h2>Rapido</h2>
+    </div>
+    <div class="card">
+        <i class="fa-solid fa-lock "></i>
+        <h2>Seguro</h2>
+    </div>
 
 </section>
 {% endblock  %}

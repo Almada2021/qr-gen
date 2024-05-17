@@ -37,10 +37,15 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'qr',
+    "django_icons",
+    "qr",
     'users',
 ]
-
+DJANGO_ICONS = {
+    "ICONS": {
+        "edit": { "name": "fa-solid fa-pencil fa-lock"}
+    }
+}
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",

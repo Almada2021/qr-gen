@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 {% load static %}
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %} QR Generador {% endblock title %}</title>
     <link rel="stylesheet" href="{% static "css/style.css" %}?{% now "U" %}">
+    {% block head %}{% endblock head %}
   </head>
   <body>
     <nav class="navbar">
@@ -26,7 +28,12 @@
     <main>{% block content %}{% endblock content %}</main>
     <footer>
       <div class="footer">
-        Footer
+        <div class="footer-column"></div>
+        <div class="footer-column"></div>
+        <div class="footer-column"></div>
+        {% comment %} <h5 class="footer-title">
+          Qr Gen
+        </h5> {% endcomment %}
       </div>
     </footer>
   </body>

@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% block title %} Nuevo Qr  {% endblock title %} 
 {%block content %}
 <section class="main-qr">
-    <h1>Nuevo Qr</h1>
+    <h1 class="main-qr-h1">Nuevo Qr</h1>
     <form action="{% url "qrs:add" %}" method="post" enctype="multipart/form-data"
     >
         {% csrf_token %}
