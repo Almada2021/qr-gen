@@ -3,10 +3,13 @@
 set -o errexit
 
 # Modify this line as needed for your package manager (pip, poetry, etc.)
-pip install -r requirements.txt
+echo "installing requiremnts"
+pip3 install -r requirements.txt
 
+echo "ready"
 # Convert static asset files
-python manage.py collectstatic --no-input
+python3 manage.py collectstatic --no-input
 
+echo "migrations"
 # Apply any outstanding database migrations
-python manage.py migrate
+python3 manage.py migrate
