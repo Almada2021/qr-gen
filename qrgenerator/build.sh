@@ -4,6 +4,7 @@ set -o errexit
 
 # Modify this line as needed for your package manager (pip, poetry, etc.)
 echo "installing requiremnts"
+echo | pwd
 pip3 install -r requirements.txt
 
 echo "ready"
