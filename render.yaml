@@ -10,7 +10,7 @@ services:
     name: mysite
     runtime: python
     buildCommand: "./qrgenerator/build.sh"
-    startCommand: "cd qrgenerator; python -m gunicorn mysite.asgi:application -k uvicorn.workers.UvicornWorker"
+    startCommand: "cd qrgenerator; python -m gunicorn qrgenerator.asgi:application -k uvicorn.workers.UvicornWorker"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
