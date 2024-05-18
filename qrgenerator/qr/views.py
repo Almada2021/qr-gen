@@ -53,7 +53,7 @@ def qr_make_view(request):
             img.save(temp_handle, format='PNG')
             temp_handle.seek(0)
             # Guardar la imagen en el modelo
-            name = f'{form.cleaned_data['title']}-{form.cleaned_data['slug']}.png'
+            name = form.cleaned_data['title'] +  {form.cleaned_data['slug']} + 'png'
             newqr.image.save(name , ContentFile(temp_handle.read()), save=False)
             newqr.save()
             return redirect('qrs:list')
